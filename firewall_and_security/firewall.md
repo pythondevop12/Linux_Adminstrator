@@ -133,3 +133,138 @@ sudo firewall-cmd --reload
 
 
 ---
+
+````md
+# How to Check if firewalld Exists and Is Running on Linux
+
+## 1. Check if firewalld Package Is Installed
+```bash
+rpm -q firewalld
+````
+
+* If installed:
+
+```text
+firewalld-<version>
+```
+
+* If not installed:
+
+```text
+package firewalld is not installed
+```
+
+> Works on RHEL / CentOS / Rocky / AlmaLinux
+
+---
+
+## 2. Check firewalld Service Status (systemd)
+
+```bash
+systemctl status firewalld
+```
+
+Possible outputs:
+
+* Active and running → firewalld exists and is enabled
+* Unit firewalld.service could not be found → not installed
+
+---
+
+## 3. Check If firewalld Service Exists (Without Starting)
+
+```bash
+systemctl list-unit-files | grep firewalld
+```
+
+---
+
+## 4. Check firewalld Binary
+
+```bash
+which firewall-cmd
+```
+
+or
+
+```bash
+firewall-cmd --state
+```
+
+* Running:
+
+```text
+running
+```
+
+* Installed but stopped:
+
+```text
+not running
+```
+
+* Not installed:
+
+```text
+command not found
+```
+
+---
+
+## 5. Debian / Ubuntu Systems
+
+```bash
+dpkg -l | grep firewalld
+```
+
+or
+
+```bash
+apt list --installed | grep firewalld
+```
+
+---
+
+## 6. Check Alternative Firewall (Ubuntu Default)
+
+Ubuntu often uses `ufw` instead of firewalld.
+
+Check UFW:
+
+```bash
+ufw status
+```
+
+---
+
+## 7. Check iptables / nftables (Low-Level)
+
+```bash
+iptables -L
+```
+
+or
+
+```bash
+nft list ruleset
+```
+
+---
+
+## 8. Quick One-Liner (Most Useful)
+
+```bash
+systemctl is-active firewalld && systemctl is-enabled firewalld
+```
+
+---
+
+## Summary
+
+* firewalld installed → `firewall-cmd` exists
+* firewalld running → `firewall-cmd --state`
+* firewalld managed by systemd → `systemctl status firewalld`
+* Ubuntu usually uses `ufw`, not firewalld
+
+```
+```
