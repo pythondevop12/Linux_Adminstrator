@@ -86,5 +86,3 @@ In production environments, the UMASK value is a critical security hardening ste
 * **Conflict:** Check if a script or a `.bashrc` entry is overriding the `/etc/login.defs` setting.
 
 ---
-
-### Would you like me to generate a cheat sheet table of common UMASK values and their resulting permissions for your README?
