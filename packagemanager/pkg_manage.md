@@ -1,4 +1,7 @@
-````md
+
+
+---
+
 # Linux Package Management Systems: rpm, dpkg, apt, yum and More
 
 
@@ -31,7 +34,7 @@
 Linux distributions use different package management systems to install, upgrade, remove, and manage software.
 Each system has its own tools, package formats, and repositories.
 
-This document explains **rpm, dpkg, apt, yum**, and related tools in detail for use in a `README.md`.
+
 
 ---
 
@@ -74,9 +77,8 @@ rpm -qa                   # List installed packages
 rpm -qi package           # Package info
 rpm -ql package           # List files in package
 rpm -qf /path/file        # Find owning package
-````
 
----
+
 
 ## YUM (Yellowdog Updater Modified)
 
