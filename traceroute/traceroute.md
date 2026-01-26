@@ -1,10 +1,7 @@
-Got it 👍
-Below is a **ready-to-drop `README.md`** in **pure Markdown**, covering **`traceroute` usage + deep troubleshooting**, practical flags, examples, and common failure patterns.
-You can paste this directly into your repo.
 
 ---
 
-````md
+
 # Linux Traceroute – Complete Guide & Troubleshooting
 
 `traceroute` is a Linux network diagnostic tool used to trace the path packets take from a source machine to a destination host.  
@@ -310,18 +307,3 @@ For production debugging, **TCP traceroute on port 443 is the most reliable meth
 
 ---
 
-### Author
-
-Amit Kumar
-Cloud / DevOps Engineer
-
-```
-
----
-
-If you want, next I can:
-- Add **real AWS / EKS examples**
-- Create a **short cheat-sheet**
-- Convert this into **GitHub-style docs**
-- Add **network diagrams explanation (text-only)**
-```
