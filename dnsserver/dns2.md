@@ -1,11 +1,4 @@
 
-
----
-
-````md
-# Ultimate DNS Server & Apache Setup Guide with Custom Domain  
-### DNS Configuration with Real-World Examples
-
 ---
 
 ## 📌 Overview
